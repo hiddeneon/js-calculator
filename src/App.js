@@ -1,56 +1,105 @@
 import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
 import './App.css';
+import Button from './Button';
 
 function App() {
+
+  const buttons = [
+    {
+    name: "AC",
+    idName: "clear"
+    },
+
+    {
+      name: "/",
+      idName: "divide"
+    },
+    
+    {
+      name: "x",
+      idName: "multiply"
+    },
+
+    {
+      name: "1",
+      idName: "one"
+    },
+
+    {
+      name: "2",
+      idName: "two"
+    },
+    
+    {
+      name: "3",
+      idName: "three"
+    },
+
+    {
+      name: "-",
+      idName: "subtract"
+    },
+
+    {
+      name: "4",
+      idName: "four"
+    },
+
+    {
+      name: "5",
+      idName: "five"
+    },
+
+    {
+      name: "6",
+      idName: "six"
+    },
+
+    {
+      name: "+",
+      idName: "add"
+    },
+
+    {
+      name: "7",
+      idName: "seven"
+    },
+
+    {
+      name: "8",
+      idName: "eight"
+    },
+
+    {
+      name: "9",
+      idName: "nine"
+    },
+
+    {
+      name: "=",
+      idName: "equals"
+    },
+
+    {
+      name: "0",
+      idName: "zero"
+    },
+
+    {
+      name: ".",
+      idName: "decimal"
+    }
+    ];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <div class="calc-body">
+      <div id="display">
+        <div class="subscreen" id="output">asdaf</div>
+        <div class="subscreen" id="input">asdfd</div>
+      </div>
+        <div class="grid">{buttons.map((el) => <Button id={el.idName} name={el.name} />)}</div>
+      </div>
     </div>
   );
 }
