@@ -93,12 +93,12 @@ function App() {
 
   return (
     <div className="App">
-      <div class="calc-body">
+      <div className="calc-body">
       <div id="display">
-        <div class="subscreen" id="output">asdaf</div>
-        <div class="subscreen" id="input">asdfd</div>
+        <div className="subscreen" id="output">asdaf</div>
+        <div className="subscreen" id="input">asdfd</div>
       </div>
-        <div class="grid">{buttons.map((el) => <Button id={el.idName} name={el.name} />)}</div>
+        <div className="grid">{buttons.map((el) => <Button id={el.idName} key={el.idName} name={el.name} />)}</div>
       </div>
     </div>
   );
