@@ -130,6 +130,8 @@ function App() {
 
       setInput(m);
       setOutput(
+        /([x]|[/]|[-]|[+])0{1}/.test(output) && /[0-9]/.test(value) ? output.replace(/.$/, value) :
+        output === "0" && /[0-9]/.test(value) ? value :
         /[\.]/.test(input) && value === "." ? output :
 
         /[0-9]/.test(value) && /0$/.test(output) ? output + value :
