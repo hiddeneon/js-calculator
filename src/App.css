@@ -82,7 +82,7 @@ button:focus {
 .subscreen {
   width: 100%;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   padding-right: 10px;
   box-sizing: border-box;
